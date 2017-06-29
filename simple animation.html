@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>simple animation</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+		.bme{
+			height:50px;
+			width:100px;
+			margin:100px auto;
+			border:1px solid black;
+			border-radius: 10px;
+			text-align:center;
+		}
+		.bme:hover{
+					animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+				    transform: translate3d(0, 0, 0);
+				    backface-visibility: hidden;
+			     	perspective: 800px;
+			}
+@keyframes shake {
+					10%, 90% {
+						transform: translate3d(-1px, 0, 0);
+					}
+					20%, 80% {
+						transform: translate3d(2px, 0, 0);
+					}
+					30%, 50%, 70% {
+						transform: translate3d(-4px, 0, 0);
+					}
+					40%, 60% {
+						transform: translate3d(4px, 0, 0);
+					}
+}
+	</style>
+</head>
+<body>
+<div class = 'bme'>打我呀</div>
+</body>
+</html>
